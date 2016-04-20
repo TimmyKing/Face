@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>班级</th>
+            <th>学号</th>
+            <th>到否</th>
+        </tr>
+
+            {% for student in student_list %}
+                <tr>
+                    <td>{{ student.name }}<td>
+                    <td>{{ student.class_name }}</td>
+                    <td>{{ student.student_id }}</td>
+                    <td>{{ student.present }}</td>
+                </tr>
+            {% endfor %}
+
+    </table>
+    <form>
+    </form>
+{% endblock %}
+
